@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gee Gee Designs · Tlokweng, Botswana 🇧🇼</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mg: #E0417A; --or: #F4832A; --yw: #F9C932;
+  --tl: #1BBFA0; --in: #4F3FC0; --sk: #3AB4E8;
+  --cr: #FFF8F0; --dk: #1A0E2E; --wm: #FFF3E6;
+  --rd: #e53e3e; --gn: #38a169;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--dk);overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(255,248,240,.94);backdrop-filter:blur(14px);border-bottom:2px solid var(--yw);}
+.logo{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:900;text-decoration:none;color:var(--dk);}
+.logo span{color:var(--mg);} .logo em{color:var(--tl);font-style:normal;}
+.nav-r{display:flex;gap:12px;align-items:center;}
+.nav-links{display:flex;gap:28px;list-style:none;margin-right:16px;}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--dk);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--mg);}
+.nav-btn{background:var(--mg);color:#fff;padding:10px 22px;border-radius:999px;font-weight:600;font-size:.8rem;text-decoration:none;transition:background .3s;}
+.nav-btn:hover{background:var(--or);}
+.admin-btn{background:var(--dk);color:var(--yw);padding:9px 18px;border-radius:999px;font-weight:600;font-size:.78rem;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s;}
+.admin-btn:hover{opacity:.85;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:linear-gradient(135deg,#FFF8F0 0%,#FFF0FB 45%,#EEF9FF 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:120px 48px 80px;position:relative;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.2;pointer-events:none;animation:bf 8s ease-in-out infinite;}
+.b1{width:500px;height:500px;background:var(--mg);top:-150px;right:-100px;}
+.b2{width:350px;height:350px;background:var(--yw);bottom:-80px;left:50px;animation-delay:3s;}
+.b3{width:280px;height:280px;background:var(--tl);top:40%;left:-80px;animation-delay:6s;}
+@keyframes bf{0%,100%{transform:translateY(0)scale(1);}50%{transform:translateY(-28px)scale(1.06);}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yw);color:var(--dk);padding:7px 20px;border-radius:999px;font-size:.78rem;font-weight:600;margin-bottom:28px;animation:sdn .6s ease .2s both;}
+h1.ht{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:900;line-height:.95;letter-spacing:-.03em;margin-bottom:24px;animation:sdn .7s ease .4s both;}
+h1.ht .l2{color:var(--mg);font-style:italic;display:block;}
+h1.ht .l3{color:var(--tl);display:block;}
+.hd{font-size:1.1rem;line-height:1.8;color:#5a4060;max-width:500px;margin:0 auto 40px;animation:sdn .7s ease .6s both;}
+.hero-acts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:sdn .7s ease .8s both;}
+.btn-m{background:var(--mg);color:#fff;padding:15px 36px;border-radius:999px;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 8px 28px rgba(224,65,122,.35);transition:all .3s;}
+.btn-m:hover{background:var(--or);transform:translateY(-2px);}
+.btn-g{color:var(--dk);font-weight:600;font-size:.88rem;text-decoration:none;border-bottom:2px solid var(--yw);padding-bottom:2px;}
+.hero-stats{display:flex;gap:48px;justify-content:center;margin-top:56px;animation:sdn .7s ease 1s both;}
+.sn{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--mg);}
+.sl{font-size:.75rem;color:#8a70a0;margin-top:2px;}
+@keyframes sdn{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── MARQUEE ── */
+.mq{background:var(--dk);padding:13px 0;overflow:hidden;white-space:nowrap;}
+.mq-in{display:inline-flex;animation:mq 22s linear infinite;}
+.mq-in:hover{animation-play-state:paused;}
+.mi{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:0 28px;color:var(--yw);display:inline-flex;align-items:center;gap:18px;}
+.mi span{width:5px;height:5px;background:var(--mg);border-radius:50%;}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ── SECTION COMMONS ── */
+.sec{padding:96px 64px;}
+.ey{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.ey::before{content:'';width:24px;height:3px;border-radius:2px;display:block;}
+.ey.pk{color:var(--mg);} .ey.pk::before{background:var(--mg);}
+.ey.tl{color:var(--tl);} .ey.tl::before{background:var(--tl);}
+.ey.or{color:var(--or);} .ey.or::before{background:var(--or);}
+.ey.in{color:var(--in);} .ey.in::before{background:var(--in);}
+.st{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:16px;}
+.st em{font-style:italic;}
+
+/* ── PORTFOLIO SECTION ── */
+#portfolio{background:var(--wm);}
+.port-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px;}
+.port-intro p{font-size:1rem;line-height:1.8;color:#6a5070;margin-top:10px;max-width:480px;}
+
+/* Grid */
+.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;}
+.empty-state{grid-column:1/-1;text-align:center;padding:80px 40px;background:#fff;border-radius:20px;border:2px dashed #ddd;}
+.empty-state .es-icon{font-size:4rem;margin-bottom:16px;}
+.empty-state h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px;color:var(--dk);}
+.empty-state p{color:#8a70a0;font-size:.9rem;}
+
+/* Design card */
+.dcard{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:transform .35s,box-shadow .35s;position:relative;cursor:pointer;}
+.dcard:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,0,0,.16);}
+.dcard-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
+.dcard-img-placeholder{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#f0f0ff,#ffe0ed);}
+.dcard-body{padding:16px 18px 20px;}
+.dcard-tag{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:8px;background:#fff0fb;color:var(--mg);}
+.dcard-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+.dcard-price{font-size:.95rem;font-weight:700;color:var(--mg);}
+.dcard-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(26,14,46,.82) 100%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:20px;}
+.dcard:hover .dcard-overlay{opacity:1;}
+.dcard-overlay-cta{color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;}
+/* Admin controls on card */
+.dcard-admin-btns{position:absolute;top:12px;right:12px;display:none;gap:8px;flex-direction:column;}
+.admin-mode .dcard-admin-btns{display:flex;}
+.dab{width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
+.dab-del{background:var(--rd);color:#fff;}
+.dab-edit{background:var(--or);color:#fff;}
+.dab:hover{transform:scale(1.1);}
+
+/* ── SERVICES ── */
+#services{background:var(--cr);}
+.sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.sv-card{border-radius:20px;padding:38px 30px;position:relative;overflow:hidden;transition:transform .3s;}
+.sv-card:hover{transform:translateY(-6px);}
+.svc1{background:linear-gradient(135deg,#FFF0FB,#FFD6EC);}
+.svc2{background:linear-gradient(135deg,#FFF8E0,#FFE89A);}
+.svc3{background:linear-gradient(135deg,#E0FBF5,#B2F0E4);}
+.svc4{background:linear-gradient(135deg,#EEF0FF,#D4D8FF);}
+.svc5{background:linear-gradient(135deg,#FFF3E8,#FFD9BB);}
+.svc6{background:linear-gradient(135deg,#E8F8FF,#B8E8FF);}
+.sv-em{font-size:2.4rem;margin-bottom:18px;display:block;}
+.sv-n{position:absolute;top:18px;right:22px;font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;opacity:.07;color:var(--dk);}
+.sv-t{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:10px;}
+.sv-d{font-size:.88rem;line-height:1.75;color:#5a4060;}
+.sv-p{margin-top:18px;font-weight:700;font-size:.85rem;}
+
+/* ── PROCESS ── */
+#process{background:var(--dk);color:#fff;}
+#process .st{color:#fff;}
+.ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative;}
+.ps-grid::before{content:'';position:absolute;top:56px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--mg),var(--or),var(--yw),var(--tl));}
+.ps{text-align:center;padding:0 20px;}
+.ps-c{width:112px;height:112px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 24px;position:relative;z-index:2;box-shadow:0 8px 30px rgba(0,0,0,.3);}
+.pc1{background:linear-gradient(135deg,var(--mg),var(--or));}
+.pc2{background:linear-gradient(135deg,var(--or),var(--yw));}
+.pc3{background:linear-gradient(135deg,var(--tl),var(--sk));}
+.pc4{background:linear-gradient(135deg,var(--in),var(--mg));}
+.ps-num{font-size:.65rem;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:8px;}
+.ps-t{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+.ps-d{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5);}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:linear-gradient(135deg,#FFF0FB,#FFF8F0 50%,#F0FFFC);}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.tc{background:#fff;border-radius:20px;padding:34px 30px;box-shadow:0 4px 24px rgba(0,0,0,.06);border-top:4px solid;transition:transform .3s;}
+.tc:hover{transform:translateY(-6px);}
+.tc1{border-color:var(--mg);} .tc2{border-color:var(--tl);} .tc3{border-color:var(--or);}
+.tc-stars{color:var(--yw);font-size:1rem;letter-spacing:2px;margin-bottom:16px;}
+.tc-txt{font-size:1rem;line-height:1.8;color:#3a2050;font-style:italic;margin-bottom:22px;}
+.tc-auth{display:flex;align-items:center;gap:12px;}
+.ta-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.78rem;color:#fff;}
+.av1{background:linear-gradient(135deg,var(--mg),var(--or));}
+.av2{background:linear-gradient(135deg,var(--tl),var(--sk));}
+.av3{background:linear-gradient(135deg,var(--in),var(--mg));}
+.ta-nm{font-weight:700;font-size:.85rem;}
+.ta-lc{font-size:.75rem;color:#8a70a0;margin-top:2px;}
+
+/* ── BOOKING ── */
+#booking{background:var(--cr);}
+.bk-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.bk-desc{font-size:1rem;line-height:1.8;color:#5a4060;margin-top:12px;max-width:420px;}
+.cc-list{display:flex;flex-direction:column;gap:14px;margin-top:32px;}
+.cc{display:flex;align-items:center;gap:14px;background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-left:4px solid var(--mg);transition:transform .2s;}
+.cc:hover{transform:translateX(4px);}
+.cc-ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.ci1{background:#FFE0ED;} .ci2{background:#E0FBF5;} .ci3{background:#FFF8E0;}
+.cc-tx a{color:var(--dk);text-decoration:none;font-weight:600;font-size:.92rem;}
+.cc-tx span{font-size:.75rem;color:#8a70a0;display:block;margin-bottom:2px;}
+.tt-promo{margin-top:24px;background:var(--dk);border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;color:#fff;}
+.tt-promo strong{display:block;font-size:.95rem;margin-bottom:3px;}
+.tt-promo p{font-size:.8rem;opacity:.65;}
+.tt-promo a{color:var(--yw);font-weight:700;text-decoration:none;}
+.bk-form{background:#fff;border-radius:22px;padding:36px;box-shadow:0 8px 40px rgba(0,0,0,.08);}
+.bk-ft{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--yw);}
+.fg{margin-bottom:18px;}
+.fg label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8a70a0;display:block;margin-bottom:7px;}
+.fg input,.fg select,.fg textarea{width:100%;border:2px solid #ede5f0;border-radius:12px;padding:12px 15px;font-family:'DM Sans',sans-serif;font-size:.92rem;outline:none;transition:border-color .25s,box-shadow .25s;background:#fff;color:var(--dk);appearance:none;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--mg);box-shadow:0 0 0 4px rgba(224,65,122,.1);}
+.fg textarea{height:100px;resize:vertical;}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.sbtn{width:100%;background:linear-gradient(135deg,var(--mg),var(--or));color:#fff;border:none;padding:16px;border-radius:999px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.05em;cursor:pointer;box-shadow:0 8px 28px rgba(224,65,122,.3);transition:all .3s;margin-top:6px;}
+.sbtn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(224,65,122,.4);}
+
+/* ── FOOTER ── */
+footer{background:var(--dk);color:#fff;padding:52px 64px 34px;}
+.ft-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:28px;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;}
+.ft-logo span{color:var(--mg);} .ft-logo em{color:var(--tl);font-style:normal;}
+.ft-lnks{display:flex;gap:22px;}
+.ft-lnks a{color:rgba(255,255,255,.45);font-size:.8rem;text-decoration:none;transition:color .2s;}
+.ft-lnks a:hover{color:var(--yw);}
+.ft-soc{display:flex;gap:10px;}
+.fsb{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;text-decoration:none;transition:transform .2s;}
+.fsb:hover{transform:scale(1.1);}
+.fsb1{background:linear-gradient(135deg,var(--mg),var(--or));}
+.fsb2{background:linear-gradient(135deg,var(--tl),var(--sk));}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-cp{font-size:.72rem;color:rgba(255,255,255,.3);}
+.ft-tg{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.3);font-size:.88rem;}
+
+/* ── ADMIN PANEL ── */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(26,14,46,.8);z-index:500;align-items:flex-start;justify-content:flex-end;backdrop-filter:blur(4px);}
+.admin-overlay.open{display:flex;}
+.admin-panel{width:480px;height:100vh;overflow-y:auto;background:#fff;box-shadow:-20px 0 60px rgba(0,0,0,.3);display:flex;flex-direction:column;}
+.ap-header{background:linear-gradient(135deg,var(--dk),#2d1a4e);color:#fff;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.ap-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;}
+.ap-sub{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:3px;}
+.ap-close{background:rgba(255,255,255,.1);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:background .2s;}
+.ap-close:hover{background:rgba(255,255,255,.25);}
+.ap-body{padding:28px 32px;flex:1;}
+.ap-section{margin-bottom:32px;padding-bottom:28px;border-bottom:2px solid #f0e8f8;}
+.ap-section-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+
+/* Upload zone */
+.upload-zone{border:2px dashed #ddd;border-radius:16px;padding:36px 20px;text-align:center;cursor:pointer;transition:border-color .3s,background .3s;background:#fafafa;position:relative;}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--mg);background:#fff0fb;}
+.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.uz-icon{font-size:2.5rem;margin-bottom:10px;}
+.uz-text{font-size:.9rem;color:#6a5070;line-height:1.6;}
+.uz-text strong{color:var(--mg);}
+.img-preview{width:100%;border-radius:12px;margin-top:16px;max-height:200px;object-fit:cover;display:none;}
+
+/* Form fields in admin */
+.af{margin-bottom:14px;}
+.af label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8a70a0;display:block;margin-bottom:6px;}
+.af input,.af select{width:100%;border:2px solid #ede5f0;border-radius:10px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;background:#fff;color:var(--dk);appearance:none;}
+.af input:focus,.af select:focus{border-color:var(--mg);}
+.af-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.add-btn{width:100%;background:linear-gradient(135deg,var(--mg),var(--or));color:#fff;border:none;padding:14px;border-radius:12px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;transition:opacity .2s;margin-top:4px;}
+.add-btn:hover{opacity:.88;}
+.add-btn:disabled{opacity:.45;cursor:not-allowed;}
+
+/* Items list in admin */
+.ap-items{display:flex;flex-direction:column;gap:12px;}
+.ap-item{display:flex;align-items:center;gap:14px;background:#fafafa;border-radius:12px;padding:12px;border:1px solid #eee;}
+.ap-item img{width:56px;height:72px;object-fit:cover;border-radius:8px;flex-shrink:0;}
+.ap-item-ph{width:56px;height:72px;border-radius:8px;background:linear-gradient(135deg,#ffe0ed,#fff0fb);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+.ap-item-info{flex:1;min-width:0;}
+.ap-item-name{font-weight:700;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ap-item-price{font-size:.8rem;color:var(--mg);font-weight:600;}
+.ap-item-tag{font-size:.7rem;color:#8a70a0;}
+.ap-item-del{background:#FFE0E0;color:var(--rd);border:none;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:.8rem;font-weight:600;flex-shrink:0;transition:background .2s;}
+.ap-item-del:hover{background:#ffb3b3;}
+.ap-empty-list{text-align:center;padding:24px;color:#8a70a0;font-size:.88rem;}
+
+/* Password modal */
+.pw-modal{display:none;position:fixed;inset:0;background:rgba(26,14,46,.85);z-index:600;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
+.pw-modal.open{display:flex;}
+.pw-box{background:#fff;border-radius:24px;padding:48px 40px;width:360px;text-align:center;}
+.pw-icon{font-size:3rem;margin-bottom:16px;}
+.pw-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;margin-bottom:8px;}
+.pw-sub{color:#8a70a0;font-size:.9rem;margin-bottom:28px;}
+.pw-input{width:100%;border:2px solid #ede5f0;border-radius:12px;padding:13px 16px;font-size:1rem;outline:none;text-align:center;letter-spacing:.2em;margin-bottom:16px;transition:border-color .2s;}
+.pw-input:focus{border-color:var(--mg);}
+.pw-input.wrong{border-color:var(--rd);animation:shake .4s ease;}
+@keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-8px);}75%{transform:translateX(8px);}}
+.pw-err{color:var(--rd);font-size:.82rem;margin-bottom:12px;display:none;}
+.pw-btn{width:100%;background:linear-gradient(135deg,var(--dk),#2d1a4e);color:var(--yw);border:none;padding:14px;border-radius:12px;font-weight:700;font-size:.9rem;cursor:pointer;transition:opacity .2s;}
+.pw-btn:hover{opacity:.88;}
+.pw-cancel{margin-top:12px;background:none;border:none;color:#8a70a0;cursor:pointer;font-size:.85rem;}
+
+/* Edit modal */
+.edit-modal{display:none;position:fixed;inset:0;background:rgba(26,14,46,.85);z-index:600;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
+.edit-modal.open{display:flex;}
+.edit-box{background:#fff;border-radius:24px;padding:40px;width:420px;max-height:90vh;overflow-y:auto;}
+.edit-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:24px;}
+.edit-img-preview{width:100%;border-radius:12px;max-height:180px;object-fit:cover;margin-bottom:16px;display:none;}
+.edit-actions{display:flex;gap:12px;margin-top:6px;}
+.edit-save{flex:1;background:linear-gradient(135deg,var(--tl),var(--sk));color:#fff;border:none;padding:13px;border-radius:12px;font-weight:700;cursor:pointer;}
+.edit-cancel{flex:1;background:#f0e8f8;color:var(--dk);border:none;padding:13px;border-radius:12px;font-weight:700;cursor:pointer;}
+
+/* Success toast */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--dk);color:#fff;padding:14px 28px;border-radius:999px;font-weight:600;font-size:.88rem;z-index:700;transition:transform .4s ease;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.25);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.toast-dot{width:8px;height:8px;border-radius:50%;background:var(--gn);}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s;}
+.rv.on{opacity:1;transform:translateY(0);}
+
+/* Admin mode indicator */
+.admin-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--dk);color:var(--yw);padding:10px 48px;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;display:none;align-items:center;justify-content:space-between;}
+.admin-bar.visible{display:flex;}
+.admin-bar-txt{display:flex;align-items:center;gap:10px;}
+.admin-bar-dot{width:8px;height:8px;border-radius:50%;background:var(--gn);animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+.admin-exit{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 16px;border-radius:999px;cursor:pointer;font-size:.75rem;font-weight:600;}
+
+/* Responsive */
+@media(max-width:960px){
+  nav{padding:14px 20px;}
+  .nav-links{display:none;}
+  .sec{padding:72px 24px;}
+  .sv-grid,.tc-grid{grid-template-columns:1fr;}
+  .ps-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .ps-grid::before{display:none;}
+  .bk-wrap{grid-template-columns:1fr;gap:40px;}
+  .fg-row{grid-template-columns:1fr;}
+  .port-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
+  footer{padding:44px 24px 32px;}
+  .ft-top,.ft-bot{flex-direction:column;gap:20px;text-align:center;}
+  .admin-panel{width:100vw;}
+}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD MODAL -->
+<div class="pw-modal" id="pwModal">
+  <div class="pw-box">
+    <div class="pw-icon">🔐</div>
+    <h3 class="pw-title">Admin Access</h3>
+    <p class="pw-sub">Enter your password to manage your portfolio</p>
+    <input class="pw-input" id="pwInput" type="password" placeholder="••••••••" maxlength="20">
+    <div class="pw-err" id="pwErr">Wrong password. Try again.</div>
+    <button class="pw-btn" onclick="checkPassword()">Enter Admin Panel</button>
+    <button class="pw-cancel" onclick="closePwModal()">Cancel</button>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="edit-modal" id="editModal">
+  <div class="edit-box">
+    <div class="edit-title">✏️ Edit Design</div>
+    <img class="edit-img-preview" id="editImgPreview">
+    <div class="af">
+      <label>Change Photo (optional)</label>
+      <div class="upload-zone" style="padding:20px;" onclick="document.getElementById('editFileInput').click()">
+        <input type="file" id="editFileInput" accept="image/*" style="display:none" onchange="handleEditPhoto(this)">
+        <div class="uz-text">Click to change photo</div>
+      </div>
+    </div>
+    <div class="af"><label>Design Name</label><input id="editName" type="text" placeholder="e.g. Teal Bubu Set"></div>
+    <div class="af-row">
+      <div class="af"><label>Category</label>
+        <select id="editCat">
+          <option>Leteisi Set</option><option>Party Wear</option><option>Bridal</option>
+          <option>Matric/Grad</option><option>Wedding Guest</option><option>Ankara Set</option>
+          <option>Bubu Set</option><option>Traditional</option><option>Custom</option>
+        </select>
+      </div>
+      <div class="af"><label>Price (BWP)</label><input id="editPrice" type="text" placeholder="e.g. P480 or From P350"></div>
+    </div>
+    <div class="edit-actions">
+      <button class="edit-save" onclick="saveEdit()">Save Changes</button>
+      <button class="edit-cancel" onclick="closeEdit()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Done!</span></div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#"><span>Gee</span><em>Gee</em> Designs</a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#booking">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <a class="nav-btn" href="#booking">Book a Fitting ✨</a>
+    <button class="admin-btn" onclick="openAdminLogin()">⚙️ Admin</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-badge">🇧🇼 Tlokweng, Botswana · Est. 2020</div>
+  <h1 class="ht">Designed<br><span class="l2">just for</span><br><span class="l3">you.</span></h1>
+  <p class="hd">Custom Leteisi sets, bubu dress sets, bridal gowns & party wear — stitched with love in Tlokweng. Because every woman deserves to feel <em>extraordinary</em>.</p>
+  <div class="hero-acts">
+    <a class="btn-m" href="#booking">Book a Fitting 📅</a>
+    <a class="btn-g" href="#portfolio">See Designs →</a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="sn" data-target="500">0</div><div class="sl">Happy Clients</div></div>
+    <div><div class="sn">5★</div><div class="sl">TikTok Reviews</div></div>
+    <div><div class="sn">BW·SA</div><div class="sl">We Deliver</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-in">
+    <span class="mi">Leteisi Dresses <span></span></span>
+    <span class="mi">Bubu Sets <span></span></span>
+    <span class="mi">Custom Fit <span></span></span>
+    <span class="mi">Bridal Gowns <span></span></span>
+    <span class="mi">Tlokweng 🇧🇼 <span></span></span>
+    <span class="mi">Party Wear <span></span></span>
+    <span class="mi">Traditional Attire <span></span></span>
+    <span class="mi">Matric Dresses <span></span></span>
+    <span class="mi">P280 Fix & Supply <span></span></span>
+    <span class="mi">Leteisi Dresses <span></span></span>
+    <span class="mi">Bubu Sets <span></span></span>
+    <span class="mi">Custom Fit <span></span></span>
+    <span class="mi">Bridal Gowns <span></span></span>
+    <span class="mi">Tlokweng 🇧🇼 <span></span></span>
+    <span class="mi">Party Wear <span></span></span>
+    <span class="mi">Traditional Attire <span></span></span>
+    <span class="mi">Matric Dresses <span></span></span>
+    <span class="mi">P280 Fix & Supply <span></span></span>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="sec" id="portfolio">
+  <div class="port-header">
+    <div class="port-intro">
+      <div class="ey pk">From Gee Gee's Studio</div>
+      <h2 class="st">Her <em>signature</em> designs</h2>
+      <p>Every piece is made-to-measure using rich African fabrics. Here's a taste of what she creates in Tlokweng.</p>
+    </div>
+    <div id="adminAddBtn" style="display:none;">
+      <button onclick="focusAddForm()" style="background:linear-gradient(135deg,var(--mg),var(--or));color:#fff;border:none;padding:14px 28px;border-radius:999px;font-weight:700;font-size:.88rem;cursor:pointer;box-shadow:0 6px 20px rgba(224,65,122,.3);">+ Add Design</button>
+    </div>
+  </div>
+  <div class="port-grid" id="portGrid">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="ey tl">What Gee Gee offers</div>
+  <h2 class="st">Services for every <em>occasion</em></h2>
+  <div class="sv-grid">
+    <div class="sv-card svc1 rv"><span class="sv-em">👗</span><div class="sv-n">01</div><h3 class="sv-t">Custom Dress Design</h3><p class="sv-d">Bring a photo, a sketch or just a feeling. Gee Gee brings it to life in your exact measurements.</p><div class="sv-p" style="color:var(--mg)">From P280 fix & supply</div></div>
+    <div class="sv-card svc2 rv"><span class="sv-em">🪡</span><div class="sv-n">02</div><h3 class="sv-t">Leteisi & Bubu Sets</h3><p class="sv-d">Authentic Leteisi fabric in vibrant prints. Bubu dress sets in white (P480) and colour (P450).</p><div class="sv-p" style="color:#b08000">From P450</div></div>
+    <div class="sv-card svc3 rv"><span class="sv-em">💍</span><div class="sv-n">03</div><h3 class="sv-t">Bridal & Wedding</h3><p class="sv-d">Wedding gowns, bridesmaid dresses, lobola attire, and traditional Tswana wedding sets.</p><div class="sv-p" style="color:var(--tl)">From P1,200</div></div>
+    <div class="sv-card svc4 rv"><span class="sv-em">🎓</span><div class="sv-n">04</div><h3 class="sv-t">Matric & Graduation</h3><p class="sv-d">Stand out at your matric dance or graduation. Gowns, jumpsuits, two-pieces — all custom.</p><div class="sv-p" style="color:var(--in)">From P600</div></div>
+    <div class="sv-card svc5 rv"><span class="sv-em">✂️</span><div class="sv-n">05</div><h3 class="sv-t">Fix & Supply</h3><p class="sv-d">Got your own fabric? Gee Gee cuts, sews and finishes to perfection with fast turnaround.</p><div class="sv-p" style="color:var(--or)">From P280</div></div>
+    <div class="sv-card svc6 rv"><span class="sv-em">📦</span><div class="sv-n">06</div><h3 class="sv-t">Nationwide Delivery</h3><p class="sv-d">Clients from Goodhope, Francistown and beyond. We deliver across Botswana and to South Africa.</p><div class="sv-p" style="color:var(--sk)">Ask about delivery</div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="process" style="background:var(--dk);color:#fff;">
+  <div class="ey" style="color:var(--yw)"><span style="width:24px;height:3px;background:var(--yw);border-radius:2px;display:block;"></span>How it works</div>
+  <h2 class="st" style="color:#fff;">From idea to <em style="color:var(--yw)">masterpiece</em></h2>
+  <div class="ps-grid">
+    <div class="ps rv"><div class="ps-c pc1">💬</div><div class="ps-num">STEP 01</div><h3 class="ps-t">WhatsApp Gee Gee</h3><p class="ps-d">Send her your idea, inspiration photos, or just describe your dream outfit.</p></div>
+    <div class="ps rv"><div class="ps-c pc2">📏</div><div class="ps-num">STEP 02</div><h3 class="ps-t">Measurements & Fabric</h3><p class="ps-d">Visit the studio or send your measurements. Choose from a wide range of fabrics.</p></div>
+    <div class="ps rv"><div class="ps-c pc3">🧵</div><div class="ps-num">STEP 03</div><h3 class="ps-t">She Creates</h3><p class="ps-d">Every stitch made with care and precision. Get updates as your piece comes to life.</p></div>
+    <div class="ps rv"><div class="ps-c pc4">✨</div><div class="ps-num">STEP 04</div><h3 class="ps-t">Collect & Glow</h3><p class="ps-d">Pick up from Tlokweng or receive delivery. Try it on, fall in love, walk out glowing.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="testimonials">
+  <div class="ey or">What clients say</div>
+  <h2 class="st">Real women, <em>real results</em></h2>
+  <div class="tc-grid">
+    <div class="tc tc1 rv"><div class="tc-stars">★★★★★</div><p class="tc-txt">"I showed her one TikTok video and she recreated it perfectly. I have never felt so beautiful in my life. Gee Gee is truly gifted!"</p><div class="tc-auth"><div class="ta-av av1">TM</div><div><div class="ta-nm">Tebogo M.</div><div class="ta-lc">📍 Gaborone</div></div></div></div>
+    <div class="tc tc2 rv"><div class="tc-stars">★★★★★</div><p class="tc-txt">"Traveled all the way from Goodhope specifically for Gee Gee. Worth every kilometer. The dress fitted like it was made in heaven!"</p><div class="tc-auth"><div class="ta-av av2">NB</div><div><div class="ta-nm">Neo B.</div><div class="ta-lc">📍 Goodhope</div></div></div></div>
+    <div class="tc tc3 rv"><div class="tc-stars">★★★★★</div><p class="tc-txt">"She made my matric dance dress and everyone was asking who made it. My night was absolutely unforgettable — thank you Gee Gee!"</p><div class="tc-auth"><div class="ta-av av3">KD</div><div><div class="ta-nm">Kefilwe D.</div><div class="ta-lc">📍 Tlokweng</div></div></div></div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec" id="booking">
+  <div class="bk-wrap">
+    <div>
+      <div class="ey in">Book a fitting</div>
+      <h2 class="st">Ready to wear <em>your story?</em></h2>
+      <p class="bk-desc">Send a booking request and Gee Gee will confirm on WhatsApp within 24 hours. Whether you're in Tlokweng or anywhere in Botswana — she'll make it work.</p>
+      <div class="cc-list">
+        <div class="cc"><div class="cc-ic ci1">📍</div><div class="cc-tx"><span>Location</span><a href="#">Tlokweng, Greater Gaborone, Botswana</a></div></div>
+        <div class="cc" style="border-color:var(--tl)"><div class="cc-ic ci2">📱</div><div class="cc-tx"><span>WhatsApp / Call</span><a href="https://wa.me/26777831302" target="_blank">+267 77 831 302</a></div></div>
+        <div class="cc" style="border-color:var(--yw)"><div class="cc-ic ci3">🕐</div><div class="cc-tx"><span>Hours</span><a>Mon – Sat: 8am – 6pm</a></div></div>
+      </div>
+      <div class="tt-promo"><span style="font-size:2rem">🎵</span><div><strong>See the magic on TikTok</strong><p>Watch Gee Gee create in real time — <a href="https://www.tiktok.com/@geegee50" target="_blank">@geegee50</a></p></div></div>
+    </div>
+    <div class="bk-form rv">
+      <div class="bk-ft">📋 Send a Booking Request</div>
+      <form onsubmit="submitBooking(event)">
+        <div class="fg-row">
+          <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name" required></div>
+          <div class="fg"><label>WhatsApp Number</label><input type="tel" placeholder="+267 00 000 000" required></div>
+        </div>
+        <div class="fg"><label>Service Needed</label>
+          <select required>
+            <option value="" disabled selected>Select a service…</option>
+            <option>Custom Dress Design</option><option>Leteisi / Bubu Set</option>
+            <option>Bridal / Wedding Attire</option><option>Matric / Graduation Dress</option>
+            <option>Fix & Supply (my own fabric)</option><option>Traditional Attire</option>
+            <option>Alterations & Repairs</option><option>Not sure yet — advise me</option>
+          </select>
+        </div>
+        <div class="fg-row">
+          <div class="fg"><label>Preferred Date</label><input type="date"></div>
+          <div class="fg"><label>Budget (BWP)</label><input type="text" placeholder="e.g. 500 – 1000"></div>
+        </div>
+        <div class="fg"><label>Describe your dream outfit</label><textarea placeholder="Tell Gee Gee about the occasion, style, colours…"></textarea></div>
+        <button class="sbtn" type="submit">Send Booking Request 🌟</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-logo"><span>Gee</span><em>Gee</em> Designs</div>
+    <div class="ft-lnks"><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a href="#process">Process</a><a href="#booking">Book Now</a></div>
+    <div class="ft-soc">
+      <a class="fsb fsb1" href="https://www.tiktok.com/@geegee50" target="_blank">🎵</a>
+      <a class="fsb fsb2" href="https://wa.me/26777831302" target="_blank">💬</a>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <div class="ft-cp">© 2025 Gee Gee Designs · Tlokweng, Botswana 🇧🇼</div>
+    <div class="ft-tg">Made with love, one stitch at a time.</div>
+  </div>
+</footer>
+
+<!-- ADMIN BAR -->
+<div class="admin-bar" id="adminBar">
+  <div class="admin-bar-txt"><span class="admin-bar-dot"></span> Admin Mode Active — you can add, edit & delete designs</div>
+  <button class="admin-exit" onclick="exitAdmin()">Exit Admin</button>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="adminOverlay" onclick="closeAdminOnBg(event)">
+  <div class="admin-panel" id="adminPanel">
+    <div class="ap-header">
+      <div>
+        <div class="ap-title">🎨 Portfolio Manager</div>
+        <div class="ap-sub">Add, edit or remove your designs</div>
+      </div>
+      <button class="ap-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="ap-body">
+
+      <!-- ADD NEW -->
+      <div class="ap-section" id="addSection">
+        <div class="ap-section-title">➕ Add New Design</div>
+
+        <div class="af">
+          <label>Upload Photo *</label>
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="photoInput" accept="image/*" onchange="handlePhotoUpload(this)">
+            <div class="uz-icon">📸</div>
+            <div class="uz-text"><strong>Click to upload</strong> or drag & drop<br>JPG, PNG, WEBP — any size</div>
+          </div>
+          <img class="img-preview" id="photoPreview">
+        </div>
+
+        <div class="af"><label>Design Name *</label><input id="newName" type="text" placeholder="e.g. Teal Leteisi Bubu Set"></div>
+        <div class="af-row">
+          <div class="af"><label>Category</label>
+            <select id="newCat">
+              <option>Leteisi Set</option><option>Bubu Set</option><option>Party Wear</option>
+              <option>Bridal</option><option>Matric/Grad</option><option>Wedding Guest</option>
+              <option>Ankara Set</option><option>Traditional</option><option>Custom</option>
+            </select>
+          </div>
+          <div class="af"><label>Price (BWP) *</label><input id="newPrice" type="text" placeholder="e.g. From P480"></div>
+        </div>
+
+        <button class="add-btn" id="addBtn" onclick="addDesign()">✨ Add to Portfolio</button>
+      </div>
+
+      <!-- MANAGE EXISTING -->
+      <div class="ap-section">
+        <div class="ap-section-title">📋 Your Designs <span id="designCount" style="font-size:.8rem;color:#8a70a0;font-weight:400;font-family:'DM Sans',sans-serif;"></span></div>
+        <div class="ap-items" id="apItems"></div>
+      </div>
+
+      <!-- CHANGE PASSWORD -->
+      <div class="ap-section" style="border:none;">
+        <div class="ap-section-title">🔑 Change Password</div>
+        <div class="af"><label>New Password</label><input id="newPw" type="password" placeholder="Enter new password"></div>
+        <div class="af"><label>Confirm Password</label><input id="confirmPw" type="password" placeholder="Confirm new password"></div>
+        <button class="add-btn" style="background:linear-gradient(135deg,var(--in),var(--sk));" onclick="changePassword()">Update Password</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// ── STATE ──
+const STORAGE_KEY = 'geegee_designs_v2';
+const PW_KEY = 'geegee_admin_pw';
+let designs = [];
+let isAdmin = false;
+let editingId = null;
+let pendingPhotoData = null; // base64 for new upload
+let editPhotoData = null;
+
+const DEFAULT_PW = 'geegee2025';
+
+function getPassword(){ return localStorage.getItem(PW_KEY) || DEFAULT_PW; }
+
+function loadDesigns(){
+  try { designs = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } 
+  catch(e){ designs = []; }
+}
+function saveDesigns(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(designs)); }
+
+// ── RENDER PORTFOLIO ──
+const tagColors = {
+  'Leteisi Set':'#e0fbf5;color:#0d8c72','Bubu Set':'#e0fbf5;color:#0d8c72',
+  'Party Wear':'#fff0fb;color:#b02057','Bridal':'#eef0ff;color:#3a2dc0',
+  'Matric/Grad':'#fff8e0;color:#b08000','Wedding Guest':'#eef0ff;color:#3a2dc0',
+  'Ankara Set':'#e8fff4;color:#0a6e55','Traditional':'#fff3e8;color:#8b3a00',
+  'Custom':'#f0f0ff;color:#4f3fc0'
+};
+
+function renderPortfolio(){
+  const grid = document.getElementById('portGrid');
+  grid.innerHTML = '';
+
+  if(designs.length === 0){
+    grid.innerHTML = `<div class="empty-state">
+      <div class="es-icon">👗</div>
+      <h3>No designs yet</h3>
+      <p>Click the ⚙️ Admin button above to add your first design!</p>
+    </div>`;
+    return;
+  }
+
+  designs.forEach(d => {
+    const tc = tagColors[d.category] || '##f0f0ff;color:#4f3fc0';
+    const [bg, col] = tc.split(';');
+    const card = document.createElement('div');
+    card.className = 'dcard';
+    card.dataset.id = d.id;
+    card.innerHTML = `
+      ${d.photo
+        ? `<img class="dcard-img" src="${d.photo}" alt="${d.name}" loading="lazy">`
+        : `<div class="dcard-img-placeholder">👗</div>`
+      }
+      <div class="dcard-body">
+        <span class="dcard-tag" style="background:${bg};${col}">${d.category}</span>
+        <div class="dcard-name">${d.name}</div>
+        <div class="dcard-price">${d.price}</div>
+      </div>
+      <div class="dcard-overlay"><div class="dcard-overlay-cta">Enquire on WhatsApp →</div></div>
+      <div class="dcard-admin-btns">
+        <button class="dab dab-edit" onclick="openEdit('${d.id}',event)" title="Edit">✏️</button>
+        <button class="dab dab-del" onclick="deleteDesign('${d.id}',event)" title="Delete">🗑️</button>
+      </div>
+    `;
+    card.addEventListener('click', e => {
+      if(!isAdmin) window.open(`https://wa.me/26777831302?text=Hi Gee Gee! I'm interested in: ${d.name} (${d.price})`, '_blank');
+    });
+    grid.appendChild(card);
+  });
+
+  if(isAdmin) document.body.classList.add('admin-mode');
+}
+
+// ── RENDER ADMIN LIST ──
+function renderAdminList(){
+  const el = document.getElementById('apItems');
+  const cnt = document.getElementById('designCount');
+  cnt.textContent = `(${designs.length} item${designs.length !== 1 ? 's' : ''})`;
+
+  if(designs.length === 0){
+    el.innerHTML = '<div class="ap-empty-list">No designs yet. Add your first one above! 👆</div>';
+    return;
+  }
+  el.innerHTML = designs.map(d => `
+    <div class="ap-item">
+      ${d.photo
+        ? `<img src="${d.photo}" alt="${d.name}">`
+        : `<div class="ap-item-ph">👗</div>`
+      }
+      <div class="ap-item-info">
+        <div class="ap-item-name">${d.name}</div>
+        <div class="ap-item-price">${d.price}</div>
+        <div class="ap-item-tag">${d.category}</div>
+      </div>
+      <button class="ap-item-del" onclick="deleteDesign('${d.id}')">Delete</button>
+    </div>
+  `).join('');
+}
+
+// ── PHOTO UPLOAD ──
+function handlePhotoUpload(input){
+  const file = input.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    pendingPhotoData = e.target.result;
+    const preview = document.getElementById('photoPreview');
+    preview.src = pendingPhotoData;
+    preview.style.display = 'block';
+    document.getElementById('uploadZone').style.borderColor = 'var(--tl)';
+    document.getElementById('uploadZone').style.background = '#e0fbf5';
+  };
+  reader.readAsDataURL(file);
+}
+
+function handleEditPhoto(input){
+  const file = input.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    editPhotoData = e.target.result;
+    const p = document.getElementById('editImgPreview');
+    p.src = editPhotoData;
+    p.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+// Drag & drop
+const uz = document.getElementById('uploadZone');
+uz.addEventListener('dragover', e => { e.preventDefault(); uz.classList.add('drag'); });
+uz.addEventListener('dragleave', () => uz.classList.remove('drag'));
+uz.addEventListener('drop', e => {
+  e.preventDefault(); uz.classList.remove('drag');
+  const file = e.dataTransfer.files[0];
+  if(file && file.type.startsWith('image/')){
+    const inp = document.getElementById('photoInput');
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    inp.files = dt.files;
+    handlePhotoUpload(inp);
+  }
+});
+
+// ── ADD DESIGN ──
+function addDesign(){
+  const name = document.getElementById('newName').value.trim();
+  const price = document.getElementById('newPrice').value.trim();
+  const cat = document.getElementById('newCat').value;
+
+  if(!name){ showToast('⚠️ Please enter a design name'); return; }
+  if(!price){ showToast('⚠️ Please enter a price'); return; }
+
+  const design = {
+    id: Date.now().toString(),
+    name, price, category: cat,
+    photo: pendingPhotoData || null,
+    createdAt: new Date().toISOString()
+  };
+
+  designs.unshift(design);
+  saveDesigns();
+  renderPortfolio();
+  renderAdminList();
+
+  // Reset form
+  document.getElementById('newName').value = '';
+  document.getElementById('newPrice').value = '';
+  document.getElementById('photoPreview').style.display = 'none';
+  document.getElementById('uploadZone').style.borderColor = '#ddd';
+  document.getElementById('uploadZone').style.background = '#fafafa';
+  document.getElementById('photoInput').value = '';
+  pendingPhotoData = null;
+
+  showToast('✅ Design added to portfolio!');
+}
+
+// ── DELETE ──
+function deleteDesign(id, e){
+  if(e) e.stopPropagation();
+  if(!confirm('Delete this design from your portfolio?')) return;
+  designs = designs.filter(d => d.id !== id);
+  saveDesigns();
+  renderPortfolio();
+  renderAdminList();
+  showToast('🗑️ Design removed');
+}
+
+// ── EDIT ──
+function openEdit(id, e){
+  if(e) e.stopPropagation();
+  const d = designs.find(x => x.id === id);
+  if(!d) return;
+  editingId = id;
+  editPhotoData = null;
+  document.getElementById('editName').value = d.name;
+  document.getElementById('editPrice').value = d.price;
+  document.getElementById('editCat').value = d.category;
+  const p = document.getElementById('editImgPreview');
+  if(d.photo){ p.src = d.photo; p.style.display = 'block'; }
+  else p.style.display = 'none';
+  document.getElementById('editFileInput').value = '';
+  document.getElementById('editModal').classList.add('open');
+}
+
+function saveEdit(){
+  const d = designs.find(x => x.id === editingId);
+  if(!d) return;
+  d.name = document.getElementById('editName').value.trim() || d.name;
+  d.price = document.getElementById('editPrice').value.trim() || d.price;
+  d.category = document.getElementById('editCat').value;
+  if(editPhotoData) d.photo = editPhotoData;
+  saveDesigns();
+  renderPortfolio();
+  renderAdminList();
+  closeEdit();
+  showToast('✅ Design updated!');
+}
+
+function closeEdit(){
+  document.getElementById('editModal').classList.remove('open');
+  editingId = null; editPhotoData = null;
+}
+
+// ── ADMIN AUTH ──
+function openAdminLogin(){
+  document.getElementById('pwModal').classList.add('open');
+  setTimeout(()=>document.getElementById('pwInput').focus(), 100);
+}
+function closePwModal(){
+  document.getElementById('pwModal').classList.remove('open');
+  document.getElementById('pwInput').value = '';
+  document.getElementById('pwErr').style.display = 'none';
+  document.getElementById('pwInput').classList.remove('wrong');
+}
+function checkPassword(){
+  const val = document.getElementById('pwInput').value;
+  if(val === getPassword()){
+    closePwModal();
+    enterAdmin();
+  } else {
+    const inp = document.getElementById('pwInput');
+    inp.classList.add('wrong');
+    document.getElementById('pwErr').style.display = 'block';
+    setTimeout(()=>inp.classList.remove('wrong'), 500);
+  }
+}
+document.getElementById('pwInput').addEventListener('keydown', e => { if(e.key==='Enter') checkPassword(); });
+
+function enterAdmin(){
+  isAdmin = true;
+  document.body.classList.add('admin-mode');
+  document.getElementById('adminBar').classList.add('visible');
+  document.getElementById('adminAddBtn').style.display = 'block';
+  document.getElementById('adminOverlay').classList.add('open');
+  renderAdminList();
+  showToast('👋 Welcome back, Gee Gee!');
+}
+
+function closeAdmin(){
+  document.getElementById('adminOverlay').classList.remove('open');
+}
+function closeAdminOnBg(e){
+  if(e.target === document.getElementById('adminOverlay')) closeAdmin();
+}
+function exitAdmin(){
+  isAdmin = false;
+  document.body.classList.remove('admin-mode');
+  document.getElementById('adminBar').classList.remove('visible');
+  document.getElementById('adminAddBtn').style.display = 'none';
+  closeAdmin();
+  showToast('👋 Exited admin mode');
+}
+
+function focusAddForm(){
+  closeAdmin();
+  document.getElementById('adminOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('newName').focus(), 300);
+}
+
+function changePassword(){
+  const np = document.getElementById('newPw').value;
+  const cp = document.getElementById('confirmPw').value;
+  if(!np || np.length < 4){ showToast('⚠️ Password must be at least 4 characters'); return; }
+  if(np !== cp){ showToast('⚠️ Passwords do not match'); return; }
+  localStorage.setItem(PW_KEY, np);
+  document.getElementById('newPw').value = '';
+  document.getElementById('confirmPw').value = '';
+  showToast('🔑 Password updated successfully!');
+}
+
+// ── TOAST ──
+let toastTimer;
+function showToast(msg){
+  clearTimeout(toastTimer);
+  document.getElementById('toastMsg').textContent = msg;
+  document.getElementById('toast').classList.add('show');
+  toastTimer = setTimeout(()=>document.getElementById('toast').classList.remove('show'), 3200);
+}
+
+// ── BOOKING ──
+function submitBooking(e){
+  e.preventDefault();
+  showToast('🎉 Booking sent! Gee Gee will WhatsApp you soon.');
+  e.target.reset();
+}
+
+// ── SCROLL REVEAL ──
+const obs = new IntersectionObserver(entries => entries.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
+}), {threshold:.1});
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// ── COUNTER ──
+function countUp(){
+  document.querySelectorAll('.sn[data-target]').forEach(el => {
+    const t = parseInt(el.dataset.target);
+    let c = 0; const step = t/50;
+    const iv = setInterval(()=>{ c = Math.min(c+step,t); el.textContent=Math.floor(c)+'+'; if(c>=t){el.textContent=t+'+';clearInterval(iv);} }, 28);
+  });
+}
+setTimeout(countUp, 900);
+
+// ── INIT ──
+loadDesigns();
+renderPortfolio();
+</script>
+</body>
+</html>
